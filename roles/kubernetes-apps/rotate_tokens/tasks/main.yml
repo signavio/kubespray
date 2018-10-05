@@ -5,7 +5,7 @@
   changed_when: false
   until: default_token.rc == 0
   delay: 1
-  retries: 5
+  retries: 20
 
 - name: Rotate Tokens | Get default token data
   command: "{{ bin_dir }}/kubectl get secrets {{ default_token.stdout }} -ojson"
